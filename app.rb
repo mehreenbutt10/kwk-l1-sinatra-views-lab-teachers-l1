@@ -1,15 +1,18 @@
 class App < Sinatra::Base
-
-	get '/hello' do
-		erb :hello
-	end
-
-  get '/goodbye' do
-    erb :goodbye
+ 
+  get '/' do 
+    erb :index
   end
   
-  get '/date' do 
-    erb :date
+  get '/voter' do
+    erb :voter
   end
 
 end
+
+Choices = {
+  'HAM' => 'Hamburger',
+  'PIZ' => 'Pizza',
+  'CUR' => 'Curry',
+  'NOO' => 'Noodles',
+}
